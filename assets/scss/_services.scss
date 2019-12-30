@@ -1,0 +1,16 @@
+.services-item {
+  width: 161px;
+
+  .services-desc {
+    background-repeat: no-repeat;
+    height: 70px;
+  }
+}
+
+.services-body {
+  height: 165px;
+  position: relative;
+  .services-text {
+    bottom: 0;
+  }
+}

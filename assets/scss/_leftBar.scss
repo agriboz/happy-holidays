@@ -1,0 +1,69 @@
+.wrapper {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.menu-trigger {
+  background-image: linear-gradient(180deg, #F8D9AF 0%, #FBD199 100%);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+  border: 10px solid $white;
+  top: 96px;
+  left: 260px;
+}
+
+.content-page {
+  margin-left: 290px;
+  overflow: hidden;
+  padding: 0 12px 65px;
+  min-height: 100vh;
+}
+
+.left-bar {
+  position: fixed;
+  height: 100vh;
+  width: 290px;
+  background-image: linear-gradient(212deg, #6A5FDD 0%, #241D8C 100%);
+  border: 1px solid #979797;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+  .left-bar-brand-wrapper {
+    height: 38px;
+  }
+  .left-bar-brand-text {
+    span {
+      color: $white;
+      font-size: 1.1rem;
+      &:nth-child(2n) {
+        color: $light-gray;
+        font-size: 0.9rem;
+      }
+    }
+
+  }
+}
+
+.navbar-nav {
+
+  .nav-item {
+    &:last-child {
+      color: red;
+    }
+  }
+
+  .nav-link {
+    transition: all 0.3s linear;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    color: $light-gray;
+
+    &.active,
+    &:hover {
+      box-shadow: inset 2px 0 0 $light-gray;
+      color: $white;
+      background-image: linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(74,144,226,0.00) 100%);
+    }
+  }
+}

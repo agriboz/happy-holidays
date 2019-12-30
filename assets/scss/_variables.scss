@@ -1,0 +1,16 @@
+$white: #fff;
+$light-gray: #D8D8D8;
+$font-medium-size: 0.95rem;
+$color-primary: #4A41B8;
+
+.text-medium {
+  font-size: $font-medium-size;
+}
+
+.text-primary {
+  color: $color-primary !important;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
