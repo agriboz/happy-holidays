@@ -1,5 +1,6 @@
 <template>
   <div class="left-bar">
+    <div class="left-bar-radial"></div>
     <a
       @click="toggleSidebar"
       href="#"
