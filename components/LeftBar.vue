@@ -1,10 +1,14 @@
 <template>
   <div class="left-bar">
     <a
+      @click="toggleSidebar"
       href="#"
       class="menu-trigger d-flex justify-content-center align-items-center text-dark"
     >
-      <font-awesome-icon far icon="chevron-left" />
+      <font-awesome-icon
+        :icon="isSidebarEnabled ? 'chevron-right' : 'chevron-left'"
+        far
+      />
     </a>
     <n-link to="/" class="d-flex align-items-center left-bar-brand-wrapper m-4">
       <div
@@ -64,3 +68,27 @@
     </ul>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      isSidebarEnabled: false
+    }
+  },
+  methods: {
+    toggleSidebar() {
+      const body = document.getElementsByTagName('body')[0]
+      const width = document.documentElement.clientWidth
+      body.classList.toggle('sidebar-enable')
+      this.isSidebarEnabled = !this.isSidebarEnabled
+
+      if (width >= 768) {
+        body.classList.toggle('enlarged')
+      } else {
+        body.classList.remove('enlarged')
+      }
+    }
+  }
+}
+</script>
